@@ -20,7 +20,7 @@ var HeroDetailComponent = (function () {
     HeroDetailComponent = __decorate([
         core_1.Component({
             selector: 'my-hero-detail',
-            template: "\n    <div *ngIf=\"hero\">\n      <h2>{{hero.name}} details!</h2>\n      <div><label>id: </label>{{hero.id}}</div>\n      <div>\n        <label>name: </label>\n        <input [(ngModel)]=\"hero.name\" placeholder=\"name\"/>\n      </div>\n    </div>\n  "
+            template: "\n\n    <div *ngIf=\"hero\" class=\"detailContainer\">\n      <h2>{{hero.name}} details!</h2>\n      \n      <div class=\"form-group\">\n      \t<label>Employee Id: </label>\n      \t<input value=\"{{hero.id}}\" placeholder=\"name\" class=\"form-control\"/>\n      </div>\n      <div class=\"form-group\">\n        <label>Name: </label>\n        <input [(ngModel)]=\"hero.name\" placeholder=\"name\"  class=\"form-control\"/>\n      </div>\n      <div class=\"form-group\">  \n      \t<label>Email: </label>\n        <input [(ngModel)]=\"hero.email\" placeholder=\"email\"  class=\"form-control\"/>\n      </div>\n      <div class=\"form-group\">  \n      \t<label>Phone: </label> \n        <input [(ngModel)]=\"hero.phone\" placeholder=\"phone\"  class=\"form-control\"/>\n      </div>\n      <div class=\"form-group\">  \n      \t<label>Website: </label> \n        <input [(ngModel)]=\"hero.website\" placeholder=\"website\"  class=\"form-control\"/>\n      </div>\n    </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], HeroDetailComponent);

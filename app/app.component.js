@@ -10,19 +10,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var HEROES = [
-    { id: 1, name: 'Sukant Sharma' },
-    { id: 2, name: 'Rahul Jain' },
-    { id: 3, name: 'Gaurav Kumar' },
-    { id: 4, name: 'Vishal Kumar' },
-    { id: 5, name: 'Rohit Kumar' },
-    { id: 6, name: 'Sachin Kumar' },
-    { id: 7, name: 'Vaibhav Bharti' },
-    { id: 8, name: 'Manoj Sharma' },
-    { id: 9, name: 'Rohan' },
-    { id: 10, name: 'Manish Bhart' },
-    { id: 11, name: 'Mohan Kumar' },
-    { id: 12, name: 'Sachin Rana' },
-    { id: 13, name: 'Manvinder Tanwar' }
+    { id: 1, name: 'Sukant Sharma', email: 'sukant@mobilyte.com', phone: '9872749463', website: 'www.sukant.com' },
+    { id: 2, name: 'Rahul Jain', email: 'rahul.jain@mobilyte.com', phone: '9872749463', website: 'www.sukant.com' },
+    { id: 3, name: 'Gaurav Kumar', email: 'gaurav.kumar@mobilyte.com', phone: '9872749463', website: 'www.sukant.com' },
+    { id: 4, name: 'Vishal Kumar', email: 'vishal.kumar@mobilyte.com', phone: '9872749463', website: 'www.sukant.com' },
+    { id: 5, name: 'Rohit Kumar', email: 'rohit.kumar@mobilyte.com', phone: '9872749463', website: 'www.sukant.com' },
+    { id: 6, name: 'Sachin Kumar', email: 'sachin.kumar@mobilyte.com', phone: '9872749463', website: 'www.sukant.com' },
+    { id: 7, name: 'Vaibhav Bharti', email: 'vaibhav.bharti@mobilyte.com', phone: '9872749463', website: 'www.sukant.com' },
+    { id: 8, name: 'Manoj Sharma', email: 'manok.sharma@mobilyte.com', phone: '9872749463', website: 'www.sukant.com' },
+    { id: 9, name: 'Rohan', email: 'rohan@mobilyte.com', phone: '9872749463', website: 'www.sukant.com' },
+    { id: 10, name: 'Manish Bhart', email: 'manish.bhart@mobilyte.com', phone: '9872749463', website: 'www.sukant.com' },
+    { id: 11, name: 'Mohan Kumar', email: 'mohan@mobilyte.com', phone: '9872749463', website: 'www.sukant.com' },
+    { id: 12, name: 'Sachin Rana', email: 'sachin.rana@mobilyte.com', phone: '9872749463', website: 'www.sukant.com' },
+    { id: 13, name: 'Manvinder Tanwar', email: 'manvinder@mobilyte.com', phone: '9872749463', website: 'www.sukant.com' }
 ];
 var AppComponent = (function () {
     function AppComponent() {
@@ -35,8 +35,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n    <h1>{{title}}</h1>\n    <h2>My Heroes</h2>\n    <ul class=\"heroes\">\n      <li *ngFor=\"let hero of heroes\"\n        [class.selected]=\"hero === selectedHero\"\n        (click)=\"onSelect(hero)\">\n        <span class=\"badge\">{{hero.id}}</span> {{hero.name}}\n      </li>\n    </ul>\n    <my-hero-detail [hero]=\"selectedHero\"></my-hero-detail>\n  ",
-            styles: ["\n    .selected {\n      background-color: #CFD8DC !important;\n      color: white;\n    }\n    .heroes {\n      margin: 0 0 2em 0;\n      list-style-type: none;\n      padding: 0;\n      width: 15em;\n    }\n    .heroes li {\n      cursor: pointer;\n      position: relative;\n      left: 0;\n      background-color: #EEE;\n      margin: .5em;\n      padding: .3em 0;\n      height: 1.6em;\n      border-radius: 4px;\n    }\n    .heroes li.selected:hover {\n      background-color: #BBD8DC !important;\n      color: white;\n    }\n    .heroes li:hover {\n      color: #607D8B;\n      background-color: #DDD;\n      left: .1em;\n    }\n    .heroes .text {\n      position: relative;\n      top: -3px;\n    }\n    .heroes .badge {\n      display: inline-block;\n      font-size: small;\n      color: white;\n      padding: 0.8em 0.7em 0 0.7em;\n      background-color: #607D8B;\n      line-height: 1em;\n      position: relative;\n      left: -1px;\n      top: -4px;\n      height: 1.8em;\n      margin-right: .8em;\n      border-radius: 4px 0 0 4px;\n    }\n  "]
+            template: "\n    <h1>{{title}}</h1>\n    <h2>My Heroes</h2>\n    <div class=\"col-md-3\">\n\t    <ul class=\"heroes\">\n\t      <li *ngFor=\"let hero of heroes\"\n\t        [class.selected]=\"hero === selectedHero\"\n\t        (click)=\"onSelect(hero)\">\n\t        <span class=\"badge\">{{hero.id}}</span> {{hero.name}}\n\t      </li>\n\t    </ul>\n    </div>\n    <div class=\"col-md-9\">\n    \t<my-hero-detail [hero]=\"selectedHero\"></my-hero-detail>\n    </div>\n    \n  "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

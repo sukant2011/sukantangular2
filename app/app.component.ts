@@ -1,19 +1,19 @@
 import { Component } from '@angular/core';
 import { Hero } from './hero';
 const HEROES: Hero[] = [
-							{id:1,name:'Sukant Sharma'},
-							{id:2,name:'Rahul Jain'},
-							{id:3,name:'Gaurav Kumar'},
-							{id:4,name:'Vishal Kumar'},
-							{id:5,name:'Rohit Kumar'},
-							{id:6,name:'Sachin Kumar'},
-							{id:7,name:'Vaibhav Bharti'},
-							{id:8,name:'Manoj Sharma'},
-							{id:9,name:'Rohan'},
-							{id:10,name:'Manish Bhart'},
-							{id:11,name:'Mohan Kumar'},
-							{id:12,name:'Sachin Rana'},
-							{id:13,name:'Manvinder Tanwar'}
+							{id:1,name:'Sukant Sharma',email:'sukant@mobilyte.com',phone:'9872749463',website:'www.sukant.com'},
+							{id:2,name:'Rahul Jain',email:'rahul.jain@mobilyte.com',phone:'9872749463',website:'www.sukant.com'},
+							{id:3,name:'Gaurav Kumar',email:'gaurav.kumar@mobilyte.com',phone:'9872749463',website:'www.sukant.com'},
+							{id:4,name:'Vishal Kumar',email:'vishal.kumar@mobilyte.com',phone:'9872749463',website:'www.sukant.com'},
+							{id:5,name:'Rohit Kumar',email:'rohit.kumar@mobilyte.com',phone:'9872749463',website:'www.sukant.com'},
+							{id:6,name:'Sachin Kumar',email:'sachin.kumar@mobilyte.com',phone:'9872749463',website:'www.sukant.com'},
+							{id:7,name:'Vaibhav Bharti',email:'vaibhav.bharti@mobilyte.com',phone:'9872749463',website:'www.sukant.com'},
+							{id:8,name:'Manoj Sharma',email:'manok.sharma@mobilyte.com',phone:'9872749463',website:'www.sukant.com'},
+							{id:9,name:'Rohan',email:'rohan@mobilyte.com',phone:'9872749463',website:'www.sukant.com'},
+							{id:10,name:'Manish Bhart',email:'manish.bhart@mobilyte.com',phone:'9872749463',website:'www.sukant.com'},
+							{id:11,name:'Mohan Kumar',email:'mohan@mobilyte.com',phone:'9872749463',website:'www.sukant.com'},
+							{id:12,name:'Sachin Rana',email:'sachin.rana@mobilyte.com',phone:'9872749463',website:'www.sukant.com'},
+							{id:13,name:'Manvinder Tanwar',email:'manvinder@mobilyte.com',phone:'9872749463',website:'www.sukant.com'}
 
 ];
 @Component({
@@ -21,64 +21,20 @@ const HEROES: Hero[] = [
   template: `
     <h1>{{title}}</h1>
     <h2>My Heroes</h2>
-    <ul class="heroes">
-      <li *ngFor="let hero of heroes"
-        [class.selected]="hero === selectedHero"
-        (click)="onSelect(hero)">
-        <span class="badge">{{hero.id}}</span> {{hero.name}}
-      </li>
-    </ul>
-    <my-hero-detail [hero]="selectedHero"></my-hero-detail>
-  `,
-  styles: [`
-    .selected {
-      background-color: #CFD8DC !important;
-      color: white;
-    }
-    .heroes {
-      margin: 0 0 2em 0;
-      list-style-type: none;
-      padding: 0;
-      width: 15em;
-    }
-    .heroes li {
-      cursor: pointer;
-      position: relative;
-      left: 0;
-      background-color: #EEE;
-      margin: .5em;
-      padding: .3em 0;
-      height: 1.6em;
-      border-radius: 4px;
-    }
-    .heroes li.selected:hover {
-      background-color: #BBD8DC !important;
-      color: white;
-    }
-    .heroes li:hover {
-      color: #607D8B;
-      background-color: #DDD;
-      left: .1em;
-    }
-    .heroes .text {
-      position: relative;
-      top: -3px;
-    }
-    .heroes .badge {
-      display: inline-block;
-      font-size: small;
-      color: white;
-      padding: 0.8em 0.7em 0 0.7em;
-      background-color: #607D8B;
-      line-height: 1em;
-      position: relative;
-      left: -1px;
-      top: -4px;
-      height: 1.8em;
-      margin-right: .8em;
-      border-radius: 4px 0 0 4px;
-    }
-  `]
+    <div class="col-md-3">
+	    <ul class="heroes">
+	      <li *ngFor="let hero of heroes"
+	        [class.selected]="hero === selectedHero"
+	        (click)="onSelect(hero)">
+	        <span class="badge">{{hero.id}}</span> {{hero.name}}
+	      </li>
+	    </ul>
+    </div>
+    <div class="col-md-9">
+    	<my-hero-detail [hero]="selectedHero"></my-hero-detail>
+    </div>
+    
+  `
 })
 export class AppComponent {
   title = 'Tour of Heroes';
